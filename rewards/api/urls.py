@@ -15,8 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.contrib import admin
 from django.urls import path
 
+from rewards.api.views import RewardLogListView
+
 urlpatterns = [
+    path('rewards/', RewardLogListView.as_view(), name='rewards-list'),
+
 ]

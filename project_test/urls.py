@@ -36,11 +36,12 @@ urlpatterns = [
         name='swagger-ui'
     ),
     path(
-        "api/v1/",
+        "api/",
         include(
             [
                 # Apps endpoints
                 path("", include("users.api.urls")),
+                path("", include("rewards.api.urls")),
             ]
         ),
     ),
