@@ -17,9 +17,9 @@ Including another URLconf
 
 from django.urls import path
 
-from rewards.api.views import RewardLogListView
+from rewards.api.views import RewardLogListView, RequestRewardView
 
 urlpatterns = [
     path('rewards/', RewardLogListView.as_view(), name='rewards-list'),
-
+    path('rewards/request/', RequestRewardView.as_view(), name='rewards-request'),
 ]
